@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECT Delta &amp; Euromax</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #fff;
+    color: #000;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  header.top {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #000;
+    padding: 6px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    z-index: 10;
+  }
+  header.top h1 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+  }
+  header.top .count {
+    font-size: 12px;
+    margin-right: auto;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  h2.section-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 14px 0 4px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+  }
+  button {
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    padding: 2px 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+  button:hover, button:active { background: #000; color: #fff; }
+  article.q {
+    border-bottom: 1px solid #000;
+    padding: 8px 0;
+  }
+  .q-head { margin-bottom: 4px; }
+  .q-num { font-weight: 600; margin-right: 4px; }
+  .q-text {
+    display: block;
+  }
+  .q-text .ro {
+    display: none;
+    opacity: .6;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+  .q-text .ro::before {
+    content: "· ";
+    opacity: .5;
+  }
+  article.q.show-ro .q-text .ro { display: inline; }
+  ul.opts {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 6px;
+  }
+  ul.opts li { padding: 2px 0; }
+  article.q.revealed ul.opts li[data-correct="1"] {
+    background: #eee;
+    padding: 2px 4px;
+  }
+  .letter { font-weight: 600; margin-right: 4px; }
+  .opt-text .ro {
+    display: none;
+    opacity: .6;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  .opt-text .ro::before {
+    content: "· ";
+    opacity: .5;
+  }
+  article.q.show-ro .opt-text .ro { display: inline; }
+  .q-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  @media print {
+    header.top, .q-actions { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>ECT Delta &amp; Euromax</h1>
+  <span class="count">176 Î</span>
+  <button type="button" id="reveal-all">Arată toate</button>
+  <button type="button" id="hide-all">Ascunde toate</button>
+  <button type="button" id="translate-all">Traduce toate</button>
+  <button type="button" id="untranslate-all">Ascunde traduceri</button>
+</header>
+
+<main>
+<section class="qset">
+<h2 class="section-title">ECT Delta Rules (105)</h2>
+<article class="q" id="s0q1">
+<div class="q-head"><div class="q-text"><span class="q-num">1.</span> <span class="en">What must every driver always carry with them in the terminal?</span><span class="ro">Ce trebuie să aibă mereu asupra lui orice șofer în terminal?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">A container list</span><span class="ro">O listă a containerelor</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">A valid ID document</span><span class="ro">Un act de identitate valabil</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">A company card</span><span class="ro">Un card de companie</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q2">
+<div class="q-head"><div class="q-text"><span class="q-num">2.</span> <span class="en">Which documents are accepted as identification?</span><span class="ro">Ce documente sunt acceptate ca act de identitate?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Driving licence, passport or ID card</span><span class="ro">Permis de conducere, pașaport sau carte de identitate</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Driving licence only</span><span class="ro">Doar permisul de conducere</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Passport only</span><span class="ro">Doar pașaportul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q3">
+<div class="q-head"><div class="q-text"><span class="q-num">3.</span> <span class="en">Must every driver carry an identification document?</span><span class="ro">Trebuie fiecare șofer să aibă asupra lui un act de identitate?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at the entrance</span><span class="ro">Doar la intrare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q4">
+<div class="q-head"><div class="q-text"><span class="q-num">4.</span> <span class="en">Is it allowed to hold a mobile device in your hand while driving?</span><span class="ro">Este permis să ții un dispozitiv mobil în mână în timp ce conduci?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at low speed</span><span class="ro">Doar la viteză mică</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q5">
+<div class="q-head"><div class="q-text"><span class="q-num">5.</span> <span class="en">Is it allowed to hold a walkie-talkie in your hand while driving?</span><span class="ro">Este permis să ții un walkie-talkie în mână în timp ce conduci?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only in an emergency</span><span class="ro">Doar în caz de urgență</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q6">
+<div class="q-head"><div class="q-text"><span class="q-num">6.</span> <span class="en">How are you allowed to make phone calls in the terminal?</span><span class="ro">Cum ai voie să dai telefoane în terminal?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">With a mobile phone in your hand</span><span class="ro">Cu telefonul mobil în mână</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Only with a hands-free system</span><span class="ro">Doar cu un sistem hands-free</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Phone calls are always forbidden</span><span class="ro">Apelurile telefonice sunt mereu interzise</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q7">
+<div class="q-head"><div class="q-text"><span class="q-num">7.</span> <span class="en">What is forbidden while driving in the terminal?</span><span class="ro">Ce este interzis în timp ce conduci în terminal?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Holding a walkie-talkie or a mobile device in your hand</span><span class="ro">Să ții un walkie-talkie sau un dispozitiv mobil în mână</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Wearing a high-visibility vest</span><span class="ro">Să porți o vestă reflectorizantă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Using a seat belt</span><span class="ro">Să folosești centura de siguranță</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q8">
+<div class="q-head"><div class="q-text"><span class="q-num">8.</span> <span class="en">What is the maximum speed limit at the ECT Delta Terminal?</span><span class="ro">Care este viteza maximă admisă în terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">30 km/h</span><span class="ro">30 km/h</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">40 km/h</span><span class="ro">40 km/h</span></span></li>
+<li data-correct="1"><span class="letter">C</span><span class="opt-text"><span class="en">50 km/h</span><span class="ro">50 km/h</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q9">
+<div class="q-head"><div class="q-text"><span class="q-num">9.</span> <span class="en">Is overtaking allowed at the ECT Delta Terminal?</span><span class="ro">Este permisă depășirea în terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only in traffic jams</span><span class="ro">Doar în ambuteiaje</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q10">
+<div class="q-head"><div class="q-text"><span class="q-num">10.</span> <span class="en">What rule applies to overtaking in the terminal?</span><span class="ro">Ce regulă se aplică depășirilor în terminal?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Overtaking is allowed</span><span class="ro">Depășirea este permisă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Overtaking is not allowed</span><span class="ro">Depășirea nu este permisă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Overtaking is allowed only at night</span><span class="ro">Depășirea este permisă doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q11">
+<div class="q-head"><div class="q-text"><span class="q-num">11.</span> <span class="en">What is mandatory at both terminals?</span><span class="ro">Ce este obligatoriu în ambele terminale?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Personal protective equipment (PPE)</span><span class="ro">Echipamentul individual de protecție (EIP)</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Gloves</span><span class="ro">Mănușile</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Safety glasses</span><span class="ro">Ochelarii de protecție</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q12">
+<div class="q-head"><div class="q-text"><span class="q-num">12.</span> <span class="en">Which personal protective equipment is mandatory at the ECT Delta Terminal?</span><span class="ro">Ce echipament individual de protecție este obligatoriu în terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Safety shoes and high-visibility clothing</span><span class="ro">Bocanci de protecție și îmbrăcăminte reflectorizantă</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Safety shoes and helmet</span><span class="ro">Bocanci de protecție și cască</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Helmet and gloves</span><span class="ro">Cască și mănuși</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q13">
+<div class="q-head"><div class="q-text"><span class="q-num">13.</span> <span class="en">Which personal protective equipment is mandatory at the ECT Euromax Terminal?</span><span class="ro">Ce echipament individual de protecție este obligatoriu în terminalul ECT Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Safety shoes and high-visibility vest</span><span class="ro">Bocanci de protecție și vestă reflectorizantă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Safety shoes, high-visibility clothing and safety helmet</span><span class="ro">Bocanci de protecție, îmbrăcăminte reflectorizantă și cască de protecție</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Safety helmet only</span><span class="ro">Doar casca de protecție</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q14">
+<div class="q-head"><div class="q-text"><span class="q-num">14.</span> <span class="en">What is prohibited at both terminals?</span><span class="ro">Ce este interzis în ambele terminale?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Wearing a high-visibility vest</span><span class="ro">Să porți vestă reflectorizantă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Smoking</span><span class="ro">Fumatul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Wearing safety shoes</span><span class="ro">Să porți bocanci de protecție</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q15">
+<div class="q-head"><div class="q-text"><span class="q-num">15.</span> <span class="en">Under the influence of what are you not allowed to enter the terminals?</span><span class="ro">Sub influența a ce nu ai voie să intri în terminale?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Coffee</span><span class="ro">Cafea</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Alcohol or drugs</span><span class="ro">Alcool sau droguri</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Energy drinks</span><span class="ro">Băuturi energizante</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q16">
+<div class="q-head"><div class="q-text"><span class="q-num">16.</span> <span class="en">How strict is the prohibition of alcohol or drugs?</span><span class="ro">Cât de strictă este interzicerea alcoolului sau a drogurilor?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Partially allowed</span><span class="ro">Parțial permis</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Strictly prohibited</span><span class="ro">Strict interzis</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Prohibited only at night</span><span class="ro">Interzis doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q17">
+<div class="q-head"><div class="q-text"><span class="q-num">17.</span> <span class="en">What must drivers wear at the ECT Delta Terminal?</span><span class="ro">Ce trebuie să poarte șoferii în terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Safety shoes and high-visibility clothing</span><span class="ro">Bocanci de protecție și îmbrăcăminte reflectorizantă</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Helmet and gloves</span><span class="ro">Cască și mănuși</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">High-visibility vest only</span><span class="ro">Doar vestă reflectorizantă</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q18">
+<div class="q-head"><div class="q-text"><span class="q-num">18.</span> <span class="en">What must drivers additionally wear at the ECT Euromax Terminal?</span><span class="ro">Ce trebuie să poarte suplimentar șoferii în terminalul ECT Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Gloves</span><span class="ro">Mănuși</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Safety helmet</span><span class="ro">Cască de protecție</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Safety glasses</span><span class="ro">Ochelari de protecție</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q19">
+<div class="q-head"><div class="q-text"><span class="q-num">19.</span> <span class="en">What is the minimum age to enter the terminal?</span><span class="ro">Care este vârsta minimă pentru a intra în terminal?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">16 years</span><span class="ro">16 ani</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">18 years</span><span class="ro">18 ani</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">21 years</span><span class="ro">21 de ani</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q20">
+<div class="q-head"><div class="q-text"><span class="q-num">20.</span> <span class="en">What is the minimum age required to access the terminals?</span><span class="ro">Care este vârsta minimă necesară pentru a avea acces în terminale?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">16 years</span><span class="ro">16 ani</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">18 years</span><span class="ro">18 ani</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">21 years</span><span class="ro">21 de ani</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q21">
+<div class="q-head"><div class="q-text"><span class="q-num">21.</span> <span class="en">Is a person under 18 years old allowed to access the terminal?</span><span class="ro">Are voie o persoană sub 18 ani să intre în terminal?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only with a helmet</span><span class="ro">Doar cu cască</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q22">
+<div class="q-head"><div class="q-text"><span class="q-num">22.</span> <span class="en">Are drivers allowed to take passengers in the truck?</span><span class="ro">Au voie șoferii să ia pasageri în camion?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes, always</span><span class="ro">Da, întotdeauna</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No, except with prior permission from security personnel</span><span class="ro">Nu, cu excepția cazului în care au permisiunea prealabilă a personalului de pază</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q23">
+<div class="q-head"><div class="q-text"><span class="q-num">23.</span> <span class="en">When are you allowed to take a passenger with you?</span><span class="ro">Când ai voie să iei un pasager cu tine?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">If the driver agrees</span><span class="ro">Dacă șoferul este de acord</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">With prior permission from security personnel</span><span class="ro">Cu permisiunea prealabilă a personalului de pază</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">If the passenger wears a helmet</span><span class="ro">Dacă pasagerul poartă cască</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q24">
+<div class="q-head"><div class="q-text"><span class="q-num">24.</span> <span class="en">Which languages must everyone at the terminal be able to understand and speak?</span><span class="ro">Ce limbi trebuie să poată înțelege și vorbi toți cei din terminal?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Dutch, English or German</span><span class="ro">Olandeză, engleză sau germană</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Dutch only</span><span class="ro">Doar olandeză</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Any language</span><span class="ro">Orice limbă</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q25">
+<div class="q-head"><div class="q-text"><span class="q-num">25.</span> <span class="en">Is filming or photographing allowed in the terminal?</span><span class="ro">Este permisă filmarea sau fotografierea în terminal?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes, anytime</span><span class="ro">Da, oricând</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No, only with permission</span><span class="ro">Nu, doar cu permisiune</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q26">
+<div class="q-head"><div class="q-text"><span class="q-num">26.</span> <span class="en">What must you do if an accident happens?</span><span class="ro">Ce trebuie să faci dacă are loc un accident?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Continue driving</span><span class="ro">Să continui să conduci</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Inform the security service immediately</span><span class="ro">Să anunți imediat serviciul de pază</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Inform only the dispatcher</span><span class="ro">Să anunți doar dispecerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q27">
+<div class="q-head"><div class="q-text"><span class="q-num">27.</span> <span class="en">What must you do if damage occurs?</span><span class="ro">Ce trebuie să faci dacă apar daune?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Ignore it</span><span class="ro">Să le ignori</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Report it immediately to the security service</span><span class="ro">Să le raportezi imediat serviciului de pază</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Report it after work</span><span class="ro">Să le raportezi după program</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q28">
+<div class="q-head"><div class="q-text"><span class="q-num">28.</span> <span class="en">What must you do in case of an incident?</span><span class="ro">Ce trebuie să faci în caz de incident?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Follow the instructions of security or emergency personnel</span><span class="ro">Să urmezi instrucțiunile personalului de pază sau de urgență</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Continue working</span><span class="ro">Să continui lucrul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q29">
+<div class="q-head"><div class="q-text"><span class="q-num">29.</span> <span class="en">Whose instructions must you follow in an emergency?</span><span class="ro">Ale cui instrucțiuni trebuie să le urmezi într-o situație de urgență?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">The instructions of security or emergency personnel</span><span class="ro">Instrucțiunile personalului de pază sau de urgență</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Other drivers</span><span class="ro">Ale altor șoferi</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Your dispatcher</span><span class="ro">Ale dispecerului tău</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q30">
+<div class="q-head"><div class="q-text"><span class="q-num">30.</span> <span class="en">Which phone number belongs to the security service of the ECT Delta Terminal?</span><span class="ro">Ce număr de telefon aparține serviciului de pază al terminalului ECT Delta?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">+31 (0)181 27 8200</span><span class="ro">+31 (0)181 27 8200</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">+31 (0)181 27 8112</span><span class="ro">+31 (0)181 27 8112</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">+31 (0)181 37 7005</span><span class="ro">+31 (0)181 37 7005</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q31">
+<div class="q-head"><div class="q-text"><span class="q-num">31.</span> <span class="en">Which phone number must you call in case of an emergency at the ECT Delta Terminal?</span><span class="ro">Ce număr de telefon trebuie să suni în caz de urgență la terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">+31 (0)181 27 8200</span><span class="ro">+31 (0)181 27 8200</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">+31 (0)181 27 8112</span><span class="ro">+31 (0)181 27 8112</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">+31 (0)181 37 7005</span><span class="ro">+31 (0)181 37 7005</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q32">
+<div class="q-head"><div class="q-text"><span class="q-num">32.</span> <span class="en">Which phone number belongs to the security service of the ECT Euromax Terminal?</span><span class="ro">Ce număr de telefon aparține serviciului de pază al terminalului ECT Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">+31 (0)181 27 8200</span><span class="ro">+31 (0)181 27 8200</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">+31 (0)181 37 7005</span><span class="ro">+31 (0)181 37 7005</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">+31 (0)181 37 7112</span><span class="ro">+31 (0)181 37 7112</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q33">
+<div class="q-head"><div class="q-text"><span class="q-num">33.</span> <span class="en">Which phone number must you call in case of an emergency at the ECT Euromax Terminal?</span><span class="ro">Ce număr de telefon trebuie să suni în caz de urgență la terminalul ECT Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">+31 (0)181 37 7005</span><span class="ro">+31 (0)181 37 7005</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">+31 (0)181 37 7112</span><span class="ro">+31 (0)181 37 7112</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">+31 (0)181 27 8112</span><span class="ro">+31 (0)181 27 8112</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q34">
+<div class="q-head"><div class="q-text"><span class="q-num">34.</span> <span class="en">How long is the certificate valid?</span><span class="ro">Cât timp este valabil certificatul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">1 year</span><span class="ro">1 an</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">2 years</span><span class="ro">2 ani</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Unlimited</span><span class="ro">Nelimitat</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q35">
+<div class="q-head"><div class="q-text"><span class="q-num">35.</span> <span class="en">What must you do if the certificate has expired?</span><span class="ro">Ce trebuie să faci dacă certificatul a expirat?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Continue driving</span><span class="ro">Să continui să conduci</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Retake the test</span><span class="ro">Să refaci testul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only read the safety regulations</span><span class="ro">Să citești doar regulile de siguranță</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q36">
+<div class="q-head"><div class="q-text"><span class="q-num">36.</span> <span class="en">After what period can you retake the certificate test?</span><span class="ro">După ce perioadă poți reface testul pentru certificat?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Immediately</span><span class="ro">Imediat</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">After three months</span><span class="ro">După trei luni</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">After one year</span><span class="ro">După un an</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q37">
+<div class="q-head"><div class="q-text"><span class="q-num">37.</span> <span class="en">Is the certificate mandatory at the terminal?</span><span class="ro">Este certificatul obligatoriu în terminal?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Yes, you must present it</span><span class="ro">Da, trebuie să îl prezinți</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">No, it is optional</span><span class="ro">Nu, este opțional</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q38">
+<div class="q-head"><div class="q-text"><span class="q-num">38.</span> <span class="en">Where is the certificate registered?</span><span class="ro">Unde este înregistrat certificatul?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">On the Cargocard</span><span class="ro">Pe Cargocard</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">On the driving licence</span><span class="ro">Pe permisul de conducere</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">In the passport</span><span class="ro">În pașaport</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q39">
+<div class="q-head"><div class="q-text"><span class="q-num">39.</span> <span class="en">How many attempts do you have to pass the test?</span><span class="ro">Câte încercări ai pentru a promova testul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">1</span><span class="ro">1</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">3</span><span class="ro">3</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">5</span><span class="ro">5</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q40">
+<div class="q-head"><div class="q-text"><span class="q-num">40.</span> <span class="en">What happens if you fail the test?</span><span class="ro">Ce se întâmplă dacă pici testul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">You are still allowed to drive</span><span class="ro">Îți este totuși permis să conduci</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">You must retake the test</span><span class="ro">Trebuie să refaci testul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">You receive a fine</span><span class="ro">Primești o amendă</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q41">
+<div class="q-head"><div class="q-text"><span class="q-num">41.</span> <span class="en">Who explains the general safety rules before the test?</span><span class="ro">Cine explică regulile generale de siguranță înainte de test?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Dispatcher</span><span class="ro">Dispecerul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The video</span><span class="ro">Videoclipul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Security service</span><span class="ro">Serviciul de pază</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q42">
+<div class="q-head"><div class="q-text"><span class="q-num">42.</span> <span class="en">Where do you arrive first when entering the ECT Delta Terminal?</span><span class="ro">Unde ajungi prima dată la intrarea în terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">At the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">At the entrance control</span><span class="ro">La controlul de intrare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">At the block group</span><span class="ro">La block group (zona de stivuire)</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q43">
+<div class="q-head"><div class="q-text"><span class="q-num">43.</span> <span class="en">Where must you drive at the entrance control?</span><span class="ro">Unde trebuie să conduci la controlul de intrare?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">To a pillar at the barrier</span><span class="ro">La un pilon de lângă barieră</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the security office</span><span class="ro">La biroul de pază</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q44">
+<div class="q-head"><div class="q-text"><span class="q-num">44.</span> <span class="en">What must you present at the pillar?</span><span class="ro">Ce trebuie să prezinți la pilon?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Driving licence</span><span class="ro">Permisul de conducere</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Cargocard</span><span class="ro">Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Container list</span><span class="ro">Lista containerelor</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q45">
+<div class="q-head"><div class="q-text"><span class="q-num">45.</span> <span class="en">Which check is carried out at the pillar?</span><span class="ro">Ce verificare se efectuează la pilon?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Fingerprint scan and/or face scan</span><span class="ro">Scanarea amprentei și/sau a feței</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Weight check</span><span class="ro">Verificarea greutății</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Container inspection</span><span class="ro">Inspecția containerului</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q46">
+<div class="q-head"><div class="q-text"><span class="q-num">46.</span> <span class="en">Which information must you enter at the pillar?</span><span class="ro">Ce informații trebuie să introduci la pilon?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Driver ID</span><span class="ro">ID-ul șoferului</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Vehicle registration number and RCI number</span><span class="ro">Numărul de înmatriculare al vehiculului și numărul RCI</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Container weight</span><span class="ro">Greutatea containerului</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q47">
+<div class="q-head"><div class="q-text"><span class="q-num">47.</span> <span class="en">What must you do after entering the data?</span><span class="ro">Ce trebuie să faci după ce introduci datele?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive on immediately</span><span class="ro">Să pleci imediat mai departe</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Check the information and follow the instructions on the screen</span><span class="ro">Să verifici informațiile și să urmezi instrucțiunile de pe ecran</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Switch off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q48">
+<div class="q-head"><div class="q-text"><span class="q-num">48.</span> <span class="en">Where are you not allowed to park your truck?</span><span class="ro">Unde nu ai voie să parchezi camionul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">In the parking area</span><span class="ro">În parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">On the access safety lanes</span><span class="ro">Pe benzile de siguranță pentru acces</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">In the waiting queue</span><span class="ro">La coada de așteptare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q49">
+<div class="q-head"><div class="q-text"><span class="q-num">49.</span> <span class="en">What happens if you park on the access safety lanes and block the handling process?</span><span class="ro">Ce se întâmplă dacă parchezi pe benzile de siguranță pentru acces și blochezi procesul de manipulare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">You will receive assistance</span><span class="ro">Vei primi asistență</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">You will not be assisted</span><span class="ro">Nu vei fi asistat</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">You may continue driving</span><span class="ro">Poți continua să conduci</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q50">
+<div class="q-head"><div class="q-text"><span class="q-num">50.</span> <span class="en">What happens after a successful RCI connection?</span><span class="ro">Ce se întâmplă după o conectare RCI reușită?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The container is automatically loaded</span><span class="ro">Containerul este încărcat automat</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The route plan appears in the ECT app</span><span class="ro">Planul traseului apare în aplicația ECT</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The barrier opens automatically</span><span class="ro">Bariera se deschide automat</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q51">
+<div class="q-head"><div class="q-text"><span class="q-num">51.</span> <span class="en">Where do you drive after a successful RCI connection?</span><span class="ro">Unde conduci după o conectare RCI reușită?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To building 5</span><span class="ro">La clădirea 5</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q52">
+<div class="q-head"><div class="q-text"><span class="q-num">52.</span> <span class="en">Where must you go if the RCI process is not successful?</span><span class="ro">Unde trebuie să mergi dacă procesul RCI nu reușește?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To building 5</span><span class="ro">La clădirea 5</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the exit</span><span class="ro">La ieșire</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q53">
+<div class="q-head"><div class="q-text"><span class="q-num">53.</span> <span class="en">Who must you contact in building 5?</span><span class="ro">Pe cine trebuie să contactezi în clădirea 5?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Security service</span><span class="ro">Serviciul de pază</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Your dispatcher</span><span class="ro">Dispecerul tău</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Another driver</span><span class="ro">Un alt șofer</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q54">
+<div class="q-head"><div class="q-text"><span class="q-num">54.</span> <span class="en">What must you do after the RCI check?</span><span class="ro">Ce trebuie să faci după verificarea RCI?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Change the container</span><span class="ro">Să schimbi containerul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Enter the RCI number again</span><span class="ro">Să introduci din nou numărul RCI</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the terminal</span><span class="ro">Să părăsești terminalul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q55">
+<div class="q-head"><div class="q-text"><span class="q-num">55.</span> <span class="en">What can happen during peak hours?</span><span class="ro">Ce se poate întâmpla în orele de vârf?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The port closes</span><span class="ro">Portul se închide</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">You are regulated and may have to wait</span><span class="ro">Ești reglementat și s-ar putea să fii nevoit să aștepți</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">All trucks drive at the same time</span><span class="ro">Toate camioanele circulă în același timp</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q56">
+<div class="q-head"><div class="q-text"><span class="q-num">56.</span> <span class="en">Where might you have to wait if the route plan is not yet available?</span><span class="ro">Unde s-ar putea să fie nevoie să aștepți dacă planul traseului nu este încă disponibil?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">In the parking area near building 5</span><span class="ro">În parcarea de lângă clădirea 5</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">In front of the photo gate</span><span class="ro">În fața porții foto</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">In the block group</span><span class="ro">În block group</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q57">
+<div class="q-head"><div class="q-text"><span class="q-num">57.</span> <span class="en">What does the photo gate do?</span><span class="ro">Ce face poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">It checks the driver</span><span class="ro">Verifică șoferul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">It takes photos of the containers</span><span class="ro">Face fotografii containerelor</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">It weighs the truck</span><span class="ro">Cântărește camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q58">
+<div class="q-head"><div class="q-text"><span class="q-num">58.</span> <span class="en">How must the truck move in the photo gate?</span><span class="ro">Cum trebuie să se deplaseze camionul prin poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">It must stand still</span><span class="ro">Trebuie să stea pe loc</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">It must move</span><span class="ro">Trebuie să fie în mișcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">It must reverse</span><span class="ro">Trebuie să meargă cu spatele</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q59">
+<div class="q-head"><div class="q-text"><span class="q-num">59.</span> <span class="en">What is the maximum speed at the photo gate in the ECT Delta Terminal?</span><span class="ro">Care este viteza maximă la poarta foto în terminalul ECT Delta?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">5 km/h</span><span class="ro">5 km/h</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">10 km/h</span><span class="ro">10 km/h</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">20 km/h</span><span class="ro">20 km/h</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q60">
+<div class="q-head"><div class="q-text"><span class="q-num">60.</span> <span class="en">Is stopping at the photo gate allowed?</span><span class="ro">Este permisă oprirea la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only in a traffic jam</span><span class="ro">Doar în ambuteiaj</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q61">
+<div class="q-head"><div class="q-text"><span class="q-num">61.</span> <span class="en">What must you do during peak hours in front of the photo gate?</span><span class="ro">Ce trebuie să faci în orele de vârf în fața porții foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Reverse</span><span class="ro">Să dai cu spatele</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Queue up</span><span class="ro">Să stai la coadă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Park the truck</span><span class="ro">Să parchezi camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q62">
+<div class="q-head"><div class="q-text"><span class="q-num">62.</span> <span class="en">When are you allowed to enter the photo gate?</span><span class="ro">Când ai voie să intri în poarta foto?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">When the previous vehicle has left</span><span class="ro">Când vehiculul anterior a plecat</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Immediately after the barrier</span><span class="ro">Imediat după barieră</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Whenever you want</span><span class="ro">Oricând vrei</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q63">
+<div class="q-head"><div class="q-text"><span class="q-num">63.</span> <span class="en">What happens if you stop in the photo gate?</span><span class="ro">Ce se întâmplă dacă te oprești în poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Nothing</span><span class="ro">Nimic</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The photos will not be of good quality and you must enter again</span><span class="ro">Fotografiile nu vor fi de bună calitate și trebuie să intri din nou</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The container will be removed</span><span class="ro">Containerul va fi îndepărtat</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q64">
+<div class="q-head"><div class="q-text"><span class="q-num">64.</span> <span class="en">What can you do if you have a flat chassis?</span><span class="ro">Ce poți face dacă ai un șasiu gol (flat chassis)?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Only drive through the photo gate</span><span class="ro">Să treci doar prin poarta foto</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Use the bypass lane</span><span class="ro">Să folosești banda de ocolire (bypass)</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Drive to the parking area</span><span class="ro">Să conduci spre parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q65">
+<div class="q-head"><div class="q-text"><span class="q-num">65.</span> <span class="en">What is the bypass lane?</span><span class="ro">Ce este banda de ocolire (bypass)?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">A separate lane to the block groups</span><span class="ro">O bandă separată către block groups</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">A parking area</span><span class="ro">O parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">An inspection hall</span><span class="ro">O hală de inspecție</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q66">
+<div class="q-head"><div class="q-text"><span class="q-num">66.</span> <span class="en">Where does the bypass lane lead?</span><span class="ro">Unde duce banda de ocolire (bypass)?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To the block groups</span><span class="ro">La block groups</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the exit</span><span class="ro">La ieșire</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q67">
+<div class="q-head"><div class="q-text"><span class="q-num">67.</span> <span class="en">What comes after the photo gate?</span><span class="ro">Ce urmează după poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The parking area</span><span class="ro">Parcarea</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The inspection</span><span class="ro">Inspecția</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The exit</span><span class="ro">Ieșirea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q68">
+<div class="q-head"><div class="q-text"><span class="q-num">68.</span> <span class="en">How must you behave during peak hours after the photo gate?</span><span class="ro">Cum trebuie să te comporți în orele de vârf după poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive backwards</span><span class="ro">Să mergi cu spatele</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Queue as best as possible</span><span class="ro">Să stai la coadă cât de bine poți</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q69">
+<div class="q-head"><div class="q-text"><span class="q-num">69.</span> <span class="en">Who always has priority in the block groups?</span><span class="ro">Cine are întotdeauna prioritate în block groups?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Pedestrians</span><span class="ro">Pietonii</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Oncoming traffic</span><span class="ro">Traficul din sens opus</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The largest truck</span><span class="ro">Cel mai mare camion</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q70">
+<div class="q-head"><div class="q-text"><span class="q-num">70.</span> <span class="en">How must you park the truck when a space is free?</span><span class="ro">Cum trebuie să parchezi camionul când un loc este liber?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Forward</span><span class="ro">Cu fața</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Backwards</span><span class="ro">Cu spatele</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Sideways</span><span class="ro">Lateral</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q71">
+<div class="q-head"><div class="q-text"><span class="q-num">71.</span> <span class="en">Where do you drive backwards when a space becomes free?</span><span class="ro">Unde conduci cu spatele când un loc devine liber?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Into one of the bays</span><span class="ro">Într-una dintre alveole (bays)</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the barrier</span><span class="ro">La barieră</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q72">
+<div class="q-head"><div class="q-text"><span class="q-num">72.</span> <span class="en">What must you not do with the driver&#x27;s cabin?</span><span class="ro">Ce nu trebuie să faci cu cabina șoferului?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Extend beyond the white line</span><span class="ro">Să depășești linia albă cu ea</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the door</span><span class="ro">Să deschizi ușa</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q73">
+<div class="q-head"><div class="q-text"><span class="q-num">73.</span> <span class="en">Which lane must you use when driving an LZV?</span><span class="ro">Ce bandă trebuie să folosești când conduci un LZV (camion lung)?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Any free lane</span><span class="ro">Orice bandă liberă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The designated lane</span><span class="ro">Banda desemnată</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only the left lane</span><span class="ro">Doar banda din stânga</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q74">
+<div class="q-head"><div class="q-text"><span class="q-num">74.</span> <span class="en">What must you do if the block group is full?</span><span class="ro">Ce trebuie să faci dacă block group-ul este plin?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive to the parking area</span><span class="ro">Să conduci la parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Drive to the apron and queue up</span><span class="ro">Să conduci la zona de așteptare (apron) și să stai la coadă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Return to the photo gate</span><span class="ro">Să te întorci la poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q75">
+<div class="q-head"><div class="q-text"><span class="q-num">75.</span> <span class="en">How many trucks may stand next to each other at most?</span><span class="ro">Câte camioane pot sta cel mult unul lângă altul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">One</span><span class="ro">Unul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Two</span><span class="ro">Două</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Three</span><span class="ro">Trei</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q76">
+<div class="q-head"><div class="q-text"><span class="q-num">76.</span> <span class="en">What must not be obstructed?</span><span class="ro">Ce nu trebuie obstrucționat?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The containers</span><span class="ro">Containerele</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Other traffic</span><span class="ro">Traficul celorlalți</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The crane</span><span class="ro">Macaraua</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q77">
+<div class="q-head"><div class="q-text"><span class="q-num">77.</span> <span class="en">What must you do after the truck is parked?</span><span class="ro">Ce trebuie să faci după ce camionul este parcat?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Open the twist locks</span><span class="ro">Să deschizi twist lock-urile</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Close the container</span><span class="ro">Să închizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q78">
+<div class="q-head"><div class="q-text"><span class="q-num">78.</span> <span class="en">What must you do if the chassis is empty?</span><span class="ro">Ce trebuie să faci dacă șasiul este gol?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Adjust it to the correct length</span><span class="ro">Să îl ajustezi la lungimea corectă</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Replace it</span><span class="ro">Să îl înlocuiești</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Lock it</span><span class="ro">Să îl blochezi</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q79">
+<div class="q-head"><div class="q-text"><span class="q-num">79.</span> <span class="en">Where must you go to present your Cargocard?</span><span class="ro">Unde trebuie să mergi pentru a prezenta Cargocard-ul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the security office</span><span class="ro">La biroul de pază</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To the counter</span><span class="ro">La ghișeu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q80">
+<div class="q-head"><div class="q-text"><span class="q-num">80.</span> <span class="en">What does a green light and a beep mean?</span><span class="ro">Ce înseamnă o lumină verde și un beep?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">You must wait</span><span class="ro">Trebuie să aștepți</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">You are successfully registered</span><span class="ro">Ești înregistrat cu succes</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">You must drive back</span><span class="ro">Trebuie să conduci înapoi</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q81">
+<div class="q-head"><div class="q-text"><span class="q-num">81.</span> <span class="en">What does a red light mean?</span><span class="ro">Ce înseamnă o lumină roșie?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Everything is fine</span><span class="ro">Totul este în regulă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Something is wrong</span><span class="ro">Ceva nu este în regulă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The container is ready</span><span class="ro">Containerul este gata</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q82">
+<div class="q-head"><div class="q-text"><span class="q-num">82.</span> <span class="en">What must you do when a red light appears?</span><span class="ro">Ce trebuie să faci când apare o lumină roșie?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive on</span><span class="ro">Să continui să conduci</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Contact personnel via the intercom</span><span class="ro">Să contactezi personalul prin interfon</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q83">
+<div class="q-head"><div class="q-text"><span class="q-num">83.</span> <span class="en">What must you do if the registration machine in the loading/unloading zone does not work?</span><span class="ro">Ce trebuie să faci dacă aparatul de înregistrare din zona de încărcare/descărcare nu funcționează?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Change the container</span><span class="ro">Să schimbi containerul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Contact personnel via the intercom</span><span class="ro">Să contactezi personalul prin interfon</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q84">
+<div class="q-head"><div class="q-text"><span class="q-num">84.</span> <span class="en">Where must you stand while your chassis is being loaded or unloaded?</span><span class="ro">Unde trebuie să stai în timp ce șasiul este încărcat sau descărcat?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Next to the designated counter</span><span class="ro">Lângă ghișeul desemnat</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Inside the truck</span><span class="ro">În interiorul camionului</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">At the photo gate</span><span class="ro">La poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q85">
+<div class="q-head"><div class="q-text"><span class="q-num">85.</span> <span class="en">Why must you stand next to the counter?</span><span class="ro">De ce trebuie să stai lângă ghișeu?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">So the reach stacker driver can see you</span><span class="ro">Ca șoferul de reach stacker să te poată vedea</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">So you can drive faster</span><span class="ro">Ca să poți conduce mai repede</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">So you can make a phone call</span><span class="ro">Ca să poți da un telefon</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q86">
+<div class="q-head"><div class="q-text"><span class="q-num">86.</span> <span class="en">What is not allowed during loading or unloading?</span><span class="ro">Ce nu este permis în timpul încărcării sau descărcării?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Keep the engine running</span><span class="ro">Să ții motorul pornit</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Leaving or driving around</span><span class="ro">Să pleci sau să conduci prin zonă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Watching the container</span><span class="ro">Să te uiți la container</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q87">
+<div class="q-head"><div class="q-text"><span class="q-num">87.</span> <span class="en">Is it allowed to take a break in the block groups?</span><span class="ro">Este permis să iei pauză în block groups?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q88">
+<div class="q-head"><div class="q-text"><span class="q-num">88.</span> <span class="en">Where do you go after loading or unloading?</span><span class="ro">Unde mergi după încărcare sau descărcare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Back to the photo gate</span><span class="ro">Înapoi la poarta foto</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the exit</span><span class="ro">La ieșire</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q89">
+<div class="q-head"><div class="q-text"><span class="q-num">89.</span> <span class="en">Who must you contact if transporting special cargo?</span><span class="ro">Pe cine trebuie să contactezi dacă transporți marfă specială?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Security control</span><span class="ro">Controlul de securitate</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Special cargo department</span><span class="ro">Departamentul pentru marfă specială</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Parking area</span><span class="ro">Parcarea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q90">
+<div class="q-head"><div class="q-text"><span class="q-num">90.</span> <span class="en">What happens at the photo gate after loading or unloading?</span><span class="ro">Ce se întâmplă la poarta foto după încărcare sau descărcare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The truck is weighed</span><span class="ro">Camionul este cântărit</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">New photos of the container are taken</span><span class="ro">Se fac fotografii noi ale containerului</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The container is opened</span><span class="ro">Containerul este deschis</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q91">
+<div class="q-head"><div class="q-text"><span class="q-num">91.</span> <span class="en">What is the maximum speed at the photo gate?</span><span class="ro">Care este viteza maximă la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">5 km/h</span><span class="ro">5 km/h</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">10 km/h</span><span class="ro">10 km/h</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">20 km/h</span><span class="ro">20 km/h</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q92">
+<div class="q-head"><div class="q-text"><span class="q-num">92.</span> <span class="en">Is stopping at the photo gate allowed?</span><span class="ro">Este permisă oprirea la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only in traffic jam</span><span class="ro">Doar în ambuteiaj</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q93">
+<div class="q-head"><div class="q-text"><span class="q-num">93.</span> <span class="en">How can you exit the terminal with a flat chassis?</span><span class="ro">Cum poți ieși din terminal cu un șasiu gol?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Through the main exit</span><span class="ro">Prin ieșirea principală</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Through the bypass exit</span><span class="ro">Prin ieșirea de bypass</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Through the photo gate</span><span class="ro">Prin poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q94">
+<div class="q-head"><div class="q-text"><span class="q-num">94.</span> <span class="en">Where do you go during the exit inspection?</span><span class="ro">Unde mergi în timpul inspecției de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Via the inspection lanes to the pillar</span><span class="ro">Pe benzile de inspecție către pilon</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the block group</span><span class="ro">La block group</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q95">
+<div class="q-head"><div class="q-text"><span class="q-num">95.</span> <span class="en">What must you show at the pillar during exit inspection?</span><span class="ro">Ce trebuie să arăți la pilon în timpul inspecției de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Driving license</span><span class="ro">Permisul de conducere</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Cargocard</span><span class="ro">Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Container list</span><span class="ro">Lista containerelor</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q96">
+<div class="q-head"><div class="q-text"><span class="q-num">96.</span> <span class="en">Which number must you enter?</span><span class="ro">Ce număr trebuie să introduci?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Container weight</span><span class="ro">Greutatea containerului</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Seal number</span><span class="ro">Numărul sigiliului</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Driver number</span><span class="ro">Numărul șoferului</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q97">
+<div class="q-head"><div class="q-text"><span class="q-num">97.</span> <span class="en">What must you report if present?</span><span class="ro">Ce trebuie să raportezi dacă este cazul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Delay</span><span class="ro">Întârzierea</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Container damages</span><span class="ro">Deteriorările containerului</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Fuel level</span><span class="ro">Nivelul de combustibil</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q98">
+<div class="q-head"><div class="q-text"><span class="q-num">98.</span> <span class="en">When are you allowed to drive to the exit control?</span><span class="ro">Când ai voie să conduci la controlul de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">When the container is empty</span><span class="ro">Când containerul este gol</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">When all container data and status are correct</span><span class="ro">Când toate datele și statusul containerului sunt corecte</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">When the driver is ready</span><span class="ro">Când șoferul este gata</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q99">
+<div class="q-head"><div class="q-text"><span class="q-num">99.</span> <span class="en">What is the exit control?</span><span class="ro">Ce este controlul de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The first stop</span><span class="ro">Prima oprire</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The last stop</span><span class="ro">Ultima oprire</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The parking area</span><span class="ro">Parcarea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q100">
+<div class="q-head"><div class="q-text"><span class="q-num">100.</span> <span class="en">What must you do at the exit control?</span><span class="ro">Ce trebuie să faci la controlul de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Show your Cargocard</span><span class="ro">Să arăți Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q101">
+<div class="q-head"><div class="q-text"><span class="q-num">101.</span> <span class="en">What must you do if the barrier does not open?</span><span class="ro">Ce trebuie să faci dacă bariera nu se deschide?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Continue driving</span><span class="ro">Să continui să conduci</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Check the ECT app</span><span class="ro">Să verifici aplicația ECT</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q102">
+<div class="q-head"><div class="q-text"><span class="q-num">102.</span> <span class="en">What must you check in the ECT app?</span><span class="ro">Ce trebuie să verifici în aplicația ECT?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">If the container is empty</span><span class="ro">Dacă containerul este gol</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">If all steps are completed</span><span class="ro">Dacă toți pașii sunt finalizați</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">If the parking space is free</span><span class="ro">Dacă locul de parcare este liber</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q103">
+<div class="q-head"><div class="q-text"><span class="q-num">103.</span> <span class="en">How must the steps in the app be marked?</span><span class="ro">Cum trebuie să fie marcați pașii în aplicație?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Red</span><span class="ro">Roșu</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Yellow</span><span class="ro">Galben</span></span></li>
+<li data-correct="1"><span class="letter">C</span><span class="opt-text"><span class="en">Green</span><span class="ro">Verde</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q104">
+<div class="q-head"><div class="q-text"><span class="q-num">104.</span> <span class="en">What must you do if not all steps are marked green?</span><span class="ro">Ce trebuie să faci dacă nu toți pașii sunt marcați cu verde?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Leave the terminal</span><span class="ro">Să părăsești terminalul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Return to the terminal and complete the missing step</span><span class="ro">Să te întorci în terminal și să finalizezi pasul lipsă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Change the container</span><span class="ro">Să schimbi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s0q105">
+<div class="q-head"><div class="q-text"><span class="q-num">105.</span> <span class="en">What must you do if there is another problem?</span><span class="ro">Ce trebuie să faci dacă apare o altă problemă?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Go to the parking area</span><span class="ro">Să mergi la parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Contact the security service via the intercom</span><span class="ro">Să contactezi serviciul de pază prin interfon</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+</section>
+<section class="qset">
+<h2 class="section-title">ECT Euromax Rules (71)</h2>
+<article class="q" id="s1q1">
+<div class="q-head"><div class="q-text"><span class="q-num">1.</span> <span class="en">What personal protective equipment (PPE) is required at the Euromax Terminal?</span><span class="ro">Ce echipament individual de protecție (EIP) este necesar în terminalul Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Safety shoes and helmet</span><span class="ro">Bocanci de protecție și cască</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Safety shoes, high-visibility clothing, and protective helmet</span><span class="ro">Bocanci de protecție, îmbrăcăminte reflectorizantă și cască de protecție</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only helmet</span><span class="ro">Doar casca</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q2">
+<div class="q-head"><div class="q-text"><span class="q-num">2.</span> <span class="en">Where do you always start at the ECT Euromax Terminal?</span><span class="ro">De unde pornești întotdeauna în terminalul ECT Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">At the photo gate</span><span class="ro">De la poarta foto</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">At the entry control</span><span class="ro">De la controlul de intrare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">At the exit control</span><span class="ro">De la controlul de ieșire</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q3">
+<div class="q-head"><div class="q-text"><span class="q-num">3.</span> <span class="en">What is the first procedure at the terminal security?</span><span class="ro">Care este prima procedură la controlul de securitate al terminalului?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Show your Cargocard at the pillar and perform the scan</span><span class="ro">Să arăți Cargocard-ul la pilon și să faci scanarea</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Drive to the photo gate</span><span class="ro">Să conduci la poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q4">
+<div class="q-head"><div class="q-text"><span class="q-num">4.</span> <span class="en">Where do you drive after the entry control?</span><span class="ro">Unde conduci după controlul de intrare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To one of the pillars at the barrier</span><span class="ro">La unul dintre pilonii de lângă barieră</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the block group</span><span class="ro">La block group</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q5">
+<div class="q-head"><div class="q-text"><span class="q-num">5.</span> <span class="en">What must you show at the pillar?</span><span class="ro">Ce trebuie să arăți la pilon?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Driver&#x27;s license</span><span class="ro">Permisul de conducere</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Cargocard</span><span class="ro">Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Passport</span><span class="ro">Pașaportul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q6">
+<div class="q-head"><div class="q-text"><span class="q-num">6.</span> <span class="en">What identification methods must you perform at the pillar?</span><span class="ro">Ce metode de identificare trebuie să efectuezi la pilon?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Fingerprint and/or facial scan</span><span class="ro">Scanarea amprentei și/sau a feței</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Only passport check</span><span class="ro">Doar verificarea pașaportului</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only camera</span><span class="ro">Doar camera</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q7">
+<div class="q-head"><div class="q-text"><span class="q-num">7.</span> <span class="en">What vehicle data must you enter?</span><span class="ro">Ce date ale vehiculului trebuie să introduci?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Container weight</span><span class="ro">Greutatea containerului</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Vehicle license plate</span><span class="ro">Numărul de înmatriculare al vehiculului</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Fuel level</span><span class="ro">Nivelul de combustibil</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q8">
+<div class="q-head"><div class="q-text"><span class="q-num">8.</span> <span class="en">What must you do on the screen?</span><span class="ro">Ce trebuie să faci pe ecran?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Check your trip information and follow the instructions</span><span class="ro">Să verifici informațiile despre cursă și să urmezi instrucțiunile</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q9">
+<div class="q-head"><div class="q-text"><span class="q-num">9.</span> <span class="en">Is it allowed to park on the access control lanes?</span><span class="ro">Este permis să parchezi pe benzile de control al accesului?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q10">
+<div class="q-head"><div class="q-text"><span class="q-num">10.</span> <span class="en">What happens if you park on the access control lanes?</span><span class="ro">Ce se întâmplă dacă parchezi pe benzile de control al accesului?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">You will get help</span><span class="ro">Vei primi ajutor</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">You will not be assisted</span><span class="ro">Nu vei fi asistat</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">You will receive a new route</span><span class="ro">Vei primi un traseu nou</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q11">
+<div class="q-head"><div class="q-text"><span class="q-num">11.</span> <span class="en">Where do you drive if all trip information is correct?</span><span class="ro">Unde conduci dacă toate informațiile despre cursă sunt corecte?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the exit</span><span class="ro">La ieșire</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q12">
+<div class="q-head"><div class="q-text"><span class="q-num">12.</span> <span class="en">What does the photo gate do?</span><span class="ro">Ce face poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Weighs the truck</span><span class="ro">Cântărește camionul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Takes photos of the containers</span><span class="ro">Face fotografii containerelor</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Checks the driver</span><span class="ro">Verifică șoferul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q13">
+<div class="q-head"><div class="q-text"><span class="q-num">13.</span> <span class="en">How must the truck move at the photo gate?</span><span class="ro">Cum trebuie să se deplaseze camionul la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">It must stand still</span><span class="ro">Trebuie să stea pe loc</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">It must keep moving</span><span class="ro">Trebuie să rămână în mișcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">It must reverse</span><span class="ro">Trebuie să meargă cu spatele</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q14">
+<div class="q-head"><div class="q-text"><span class="q-num">14.</span> <span class="en">What is the maximum speed at the photo gate at the Euromax Terminal?</span><span class="ro">Care este viteza maximă la poarta foto în terminalul Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">10 km/h</span><span class="ro">10 km/h</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">20 km/h</span><span class="ro">20 km/h</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">30 km/h</span><span class="ro">30 km/h</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q15">
+<div class="q-head"><div class="q-text"><span class="q-num">15.</span> <span class="en">Is stopping at the photo gate allowed?</span><span class="ro">Este permisă oprirea la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only in traffic</span><span class="ro">Doar în trafic</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q16">
+<div class="q-head"><div class="q-text"><span class="q-num">16.</span> <span class="en">What must you do during peak hours?</span><span class="ro">Ce trebuie să faci în orele de vârf?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive immediately</span><span class="ro">Să conduci imediat</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Wait in the queue</span><span class="ro">Să aștepți la coadă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Reverse</span><span class="ro">Să mergi cu spatele</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q17">
+<div class="q-head"><div class="q-text"><span class="q-num">17.</span> <span class="en">When are you allowed to enter the photo gate?</span><span class="ro">Când ai voie să intri în poarta foto?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">When the light is green and the previous truck has exited</span><span class="ro">Când lumina este verde și camionul anterior a ieșit</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Whenever you want</span><span class="ro">Oricând vrei</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">When no container is present</span><span class="ro">Când nu există niciun container</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q18">
+<div class="q-head"><div class="q-text"><span class="q-num">18.</span> <span class="en">What happens if you stop at the photo gate?</span><span class="ro">Ce se întâmplă dacă te oprești la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The photos will be better</span><span class="ro">Fotografiile vor fi mai bune</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The photos will not be of good quality and you must re-enter</span><span class="ro">Fotografiile nu vor fi de bună calitate și trebuie să intri din nou</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">You may continue immediately</span><span class="ro">Poți continua imediat</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q19">
+<div class="q-head"><div class="q-text"><span class="q-num">19.</span> <span class="en">Do you drive through the photo gate with an empty chassis at the Euromax Terminal?</span><span class="ro">Treci prin poarta foto cu un șasiu gol în terminalul Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q20">
+<div class="q-head"><div class="q-text"><span class="q-num">20.</span> <span class="en">How must you drive with a flat chassis through the photo gate?</span><span class="ro">Cum trebuie să conduci cu un șasiu gol prin poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Using a bypass lane</span><span class="ro">Folosind o bandă de ocolire (bypass)</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Directly through the photo gate</span><span class="ro">Direct prin poarta foto</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Via the parking area</span><span class="ro">Prin parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q21">
+<div class="q-head"><div class="q-text"><span class="q-num">21.</span> <span class="en">What comes after the photo gate?</span><span class="ro">Ce urmează după poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Exit control</span><span class="ro">Controlul de ieșire</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Inspection</span><span class="ro">Inspecția</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Parking area</span><span class="ro">Parcarea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q22">
+<div class="q-head"><div class="q-text"><span class="q-num">22.</span> <span class="en">Where must you drive for the inspection?</span><span class="ro">Unde trebuie să conduci pentru inspecție?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Into the inspection lane</span><span class="ro">Pe banda de inspecție</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the transfer zone</span><span class="ro">În zona de transfer</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q23">
+<div class="q-head"><div class="q-text"><span class="q-num">23.</span> <span class="en">What does it mean if &quot;Closed&quot; is displayed above the inspection gate?</span><span class="ro">Ce înseamnă dacă este afișat „Closed” (Închis) deasupra porții de inspecție?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">You may enter slowly</span><span class="ro">Poți intra încet</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">You may not enter</span><span class="ro">Nu ai voie să intri</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">You must wait</span><span class="ro">Trebuie să aștepți</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q24">
+<div class="q-head"><div class="q-text"><span class="q-num">24.</span> <span class="en">What must you show after passing the inspection?</span><span class="ro">Ce trebuie să arăți după ce treci de inspecție?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Passport</span><span class="ro">Pașaportul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Cargocard</span><span class="ro">Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Driver&#x27;s license</span><span class="ro">Permisul de conducere</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q25">
+<div class="q-head"><div class="q-text"><span class="q-num">25.</span> <span class="en">Which number must you enter at the inspection?</span><span class="ro">Ce număr trebuie să introduci la inspecție?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Container weight</span><span class="ro">Greutatea containerului</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">RCI number</span><span class="ro">Numărul RCI</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Driver number</span><span class="ro">Numărul șoferului</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q26">
+<div class="q-head"><div class="q-text"><span class="q-num">26.</span> <span class="en">What else must you report?</span><span class="ro">Ce altceva trebuie să raportezi?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Fuel level</span><span class="ro">Nivelul de combustibil</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Any damages</span><span class="ro">Orice daune</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The route</span><span class="ro">Traseul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q27">
+<div class="q-head"><div class="q-text"><span class="q-num">27.</span> <span class="en">What must you select about the container?</span><span class="ro">Ce trebuie să selectezi în legătură cu containerul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The color</span><span class="ro">Culoarea</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Its position on the truck</span><span class="ro">Poziția lui pe camion</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The engine size</span><span class="ro">Capacitatea motorului</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q28">
+<div class="q-head"><div class="q-text"><span class="q-num">28.</span> <span class="en">Where do you drive if the RCI connection is successful?</span><span class="ro">Unde conduci dacă conectarea RCI este reușită?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the exit</span><span class="ro">La ieșire</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To the transfer zones</span><span class="ro">La zonele de transfer</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q29">
+<div class="q-head"><div class="q-text"><span class="q-num">29.</span> <span class="en">Where do you drive if the RCI process was not successful?</span><span class="ro">Unde conduci dacă procesul RCI nu a reușit?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">To the waiting area</span><span class="ro">La zona de așteptare</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the block group</span><span class="ro">La block group</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q30">
+<div class="q-head"><div class="q-text"><span class="q-num">30.</span> <span class="en">Who must you contact in the waiting area?</span><span class="ro">Pe cine trebuie să contactezi în zona de așteptare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Security service</span><span class="ro">Serviciul de pază</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Your dispatcher</span><span class="ro">Dispecerul tău</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Customs</span><span class="ro">Vama</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q31">
+<div class="q-head"><div class="q-text"><span class="q-num">31.</span> <span class="en">Why must you contact the dispatcher?</span><span class="ro">De ce trebuie să contactezi dispecerul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To change the route</span><span class="ro">Ca să schimbi traseul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To have the RCI checked</span><span class="ro">Ca să fie verificat RCI-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To change the container</span><span class="ro">Ca să schimbi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q32">
+<div class="q-head"><div class="q-text"><span class="q-num">32.</span> <span class="en">What must you do after the dispatcher has checked the RCI?</span><span class="ro">Ce trebuie să faci după ce dispecerul a verificat RCI-ul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Leave the terminal</span><span class="ro">Să părăsești terminalul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Drive another round and register the RCI number again</span><span class="ro">Să mai faci o tură și să înregistrezi din nou numărul RCI</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q33">
+<div class="q-head"><div class="q-text"><span class="q-num">33.</span> <span class="en">When is the route plan displayed?</span><span class="ro">Când este afișat planul traseului?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">When the container is empty</span><span class="ro">Când containerul este gol</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">When the registration is successful</span><span class="ro">Când înregistrarea este reușită</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">When the driver is ready</span><span class="ro">Când șoferul este gata</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q34">
+<div class="q-head"><div class="q-text"><span class="q-num">34.</span> <span class="en">Where is the route plan displayed?</span><span class="ro">Unde este afișat planul traseului?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">In the ECT app</span><span class="ro">În aplicația ECT</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">On the container</span><span class="ro">Pe container</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">At the photo gate</span><span class="ro">La poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q35">
+<div class="q-head"><div class="q-text"><span class="q-num">35.</span> <span class="en">Where can you see the route plan for loading or unloading?</span><span class="ro">Unde poți vedea planul traseului pentru încărcare sau descărcare?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">In the ECT app</span><span class="ro">În aplicația ECT</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">At the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">With the security service</span><span class="ro">La serviciul de pază</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q36">
+<div class="q-head"><div class="q-text"><span class="q-num">36.</span> <span class="en">What must you do during peak hours?</span><span class="ro">Ce trebuie să faci în orele de vârf?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive immediately</span><span class="ro">Să conduci imediat</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Go to the waiting area and park in a bay</span><span class="ro">Să mergi la zona de așteptare și să parchezi într-o alveolă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q37">
+<div class="q-head"><div class="q-text"><span class="q-num">37.</span> <span class="en">How do you know when a transfer zone is available?</span><span class="ro">Cum știi când o zonă de transfer este disponibilă?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Through a loudspeaker announcement</span><span class="ro">Printr-un anunț la difuzor</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Through a notification in the app</span><span class="ro">Printr-o notificare în aplicație</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Through a traffic light</span><span class="ro">Printr-un semafor</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q38">
+<div class="q-head"><div class="q-text"><span class="q-num">38.</span> <span class="en">What must you do in the waiting area to access the route plan?</span><span class="ro">Ce trebuie să faci în zona de așteptare pentru a accesa planul traseului?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Show your Cargocard at the column</span><span class="ro">Să arăți Cargocard-ul la stâlp (coloană)</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q39">
+<div class="q-head"><div class="q-text"><span class="q-num">39.</span> <span class="en">Where must you go next?</span><span class="ro">Unde trebuie să mergi în continuare?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Into the transfer zone</span><span class="ro">În zona de transfer</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the exit</span><span class="ro">La ieșire</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q40">
+<div class="q-head"><div class="q-text"><span class="q-num">40.</span> <span class="en">What must you do during peak hours in the transfer zone?</span><span class="ro">Ce trebuie să faci în orele de vârf în zona de transfer?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive backwards</span><span class="ro">Să mergi cu spatele</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Join the queue</span><span class="ro">Să te alături cozii</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q41">
+<div class="q-head"><div class="q-text"><span class="q-num">41.</span> <span class="en">Who always has the right of way in the transfer zone?</span><span class="ro">Cine are întotdeauna prioritate în zona de transfer?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Pedestrians</span><span class="ro">Pietonii</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Oncoming traffic</span><span class="ro">Traficul din sens opus</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The largest truck</span><span class="ro">Cel mai mare camion</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q42">
+<div class="q-head"><div class="q-text"><span class="q-num">42.</span> <span class="en">What must you use if the transfer zone is full?</span><span class="ro">Ce trebuie să folosești dacă zona de transfer este plină?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The parking area</span><span class="ro">Parcarea</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">The waiting lane marked with white lines</span><span class="ro">Banda de așteptare marcată cu linii albe</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The exit</span><span class="ro">Ieșirea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q43">
+<div class="q-head"><div class="q-text"><span class="q-num">43.</span> <span class="en">How must you park when a bay becomes available?</span><span class="ro">Cum trebuie să parchezi când devine disponibilă o alveolă?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Forwards</span><span class="ro">Cu fața</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Backwards</span><span class="ro">Cu spatele</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Sideways</span><span class="ro">Lateral</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q44">
+<div class="q-head"><div class="q-text"><span class="q-num">44.</span> <span class="en">What must the cab not do?</span><span class="ro">Ce nu trebuie să facă cabina?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Extend beyond the white line</span><span class="ro">Să depășească linia albă</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">Keep the engine running</span><span class="ro">Să țină motorul pornit</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the door</span><span class="ro">Să deschidă ușa</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q45">
+<div class="q-head"><div class="q-text"><span class="q-num">45.</span> <span class="en">Which lane must you use when driving an LZV?</span><span class="ro">Ce bandă trebuie să folosești când conduci un LZV?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Any free lane</span><span class="ro">Orice bandă liberă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Only the lane designated for it</span><span class="ro">Doar banda desemnată pentru el</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only the left lane</span><span class="ro">Doar banda din stânga</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q46">
+<div class="q-head"><div class="q-text"><span class="q-num">46.</span> <span class="en">What must you do after parking the truck?</span><span class="ro">Ce trebuie să faci după ce parchezi camionul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Open the twist locks</span><span class="ro">Să deschizi twist lock-urile</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Change the container</span><span class="ro">Să schimbi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q47">
+<div class="q-head"><div class="q-text"><span class="q-num">47.</span> <span class="en">What is the correct procedure at the loading or unloading bay?</span><span class="ro">Care este procedura corectă la alveola de încărcare sau descărcare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Open the twist locks and go to the column</span><span class="ro">Să deschizi twist lock-urile și să mergi la stâlp (coloană)</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Unload the container yourself</span><span class="ro">Să descarci containerul tu însuți</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q48">
+<div class="q-head"><div class="q-text"><span class="q-num">48.</span> <span class="en">What must you do if the chassis is empty?</span><span class="ro">Ce trebuie să faci dacă șasiul este gol?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Replace it</span><span class="ro">Să îl înlocuiești</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Adjust it to the correct length</span><span class="ro">Să îl ajustezi la lungimea corectă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Close it</span><span class="ro">Să îl închizi</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q49">
+<div class="q-head"><div class="q-text"><span class="q-num">49.</span> <span class="en">Where must you go after parking?</span><span class="ro">Unde trebuie să mergi după parcare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To the photo gate</span><span class="ro">La poarta foto</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To the column</span><span class="ro">La stâlp (coloană)</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q50">
+<div class="q-head"><div class="q-text"><span class="q-num">50.</span> <span class="en">What must you show at the column?</span><span class="ro">Ce trebuie să arăți la stâlp (coloană)?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Driver&#x27;s license</span><span class="ro">Permisul de conducere</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Cargocard</span><span class="ro">Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Passport</span><span class="ro">Pașaportul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q51">
+<div class="q-head"><div class="q-text"><span class="q-num">51.</span> <span class="en">What must you do after scanning the Cargocard?</span><span class="ro">Ce trebuie să faci după scanarea Cargocard-ului?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Answer the questions</span><span class="ro">Să răspunzi la întrebări</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q52">
+<div class="q-head"><div class="q-text"><span class="q-num">52.</span> <span class="en">What happens after approval?</span><span class="ro">Ce se întâmplă după aprobare?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The container is removed</span><span class="ro">Containerul este îndepărtat</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Your assignment is activated</span><span class="ro">Sarcina ta este activată</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The truck is checked</span><span class="ro">Camionul este verificat</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q53">
+<div class="q-head"><div class="q-text"><span class="q-num">53.</span> <span class="en">Where must you stay during loading or unloading?</span><span class="ro">Unde trebuie să stai în timpul încărcării sau descărcării?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">In the truck</span><span class="ro">În camion</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">On the green area in front of the column</span><span class="ro">În zona verde din fața stâlpului (coloanei)</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">At the photo gate</span><span class="ro">La poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q54">
+<div class="q-head"><div class="q-text"><span class="q-num">54.</span> <span class="en">What is not allowed during loading or unloading?</span><span class="ro">Ce nu este permis în timpul încărcării sau descărcării?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Keep the engine running</span><span class="ro">Să ții motorul pornit</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Leave or drive around</span><span class="ro">Să pleci sau să conduci prin zonă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Watch the container</span><span class="ro">Să te uiți la container</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q55">
+<div class="q-head"><div class="q-text"><span class="q-num">55.</span> <span class="en">Is it allowed to take a break in the transfer zones?</span><span class="ro">Este permis să iei pauză în zonele de transfer?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only at night</span><span class="ro">Doar noaptea</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q56">
+<div class="q-head"><div class="q-text"><span class="q-num">56.</span> <span class="en">How can you communicate with the staff?</span><span class="ro">Cum poți comunica cu personalul?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">By phone</span><span class="ro">Prin telefon</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Via the intercom</span><span class="ro">Prin interfon</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">By radio</span><span class="ro">Prin stație radio</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q57">
+<div class="q-head"><div class="q-text"><span class="q-num">57.</span> <span class="en">Where must you report if you are transporting special cargo?</span><span class="ro">Unde trebuie să te prezinți dacă transporți marfă specială?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">To customs</span><span class="ro">La vamă</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">To the special cargo department</span><span class="ro">La departamentul pentru marfă specială</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q58">
+<div class="q-head"><div class="q-text"><span class="q-num">58.</span> <span class="en">What must you do when transporting special cargo?</span><span class="ro">Ce trebuie să faci când transporți marfă specială?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Go to the parking area</span><span class="ro">Să mergi la parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Report to the special cargo department</span><span class="ro">Să te prezinți la departamentul pentru marfă specială</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Go directly to the photo gate</span><span class="ro">Să mergi direct la poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q59">
+<div class="q-head"><div class="q-text"><span class="q-num">59.</span> <span class="en">Where do you go when finished?</span><span class="ro">Unde mergi când ai terminat?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">Back to the photo gate</span><span class="ro">Înapoi la poarta foto</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the block group</span><span class="ro">La block group</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q60">
+<div class="q-head"><div class="q-text"><span class="q-num">60.</span> <span class="en">What happens at the photo gate during exit?</span><span class="ro">Ce se întâmplă la poarta foto în timpul ieșirii?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">The container is opened</span><span class="ro">Containerul este deschis</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">New photos are taken</span><span class="ro">Se fac fotografii noi</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">The driver is checked</span><span class="ro">Șoferul este verificat</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q61">
+<div class="q-head"><div class="q-text"><span class="q-num">61.</span> <span class="en">What is the maximum speed at the photo gate in the Euromax Terminal?</span><span class="ro">Care este viteza maximă la poarta foto în terminalul Euromax?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">10 km/h</span><span class="ro">10 km/h</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">20 km/h</span><span class="ro">20 km/h</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">30 km/h</span><span class="ro">30 km/h</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q62">
+<div class="q-head"><div class="q-text"><span class="q-num">62.</span> <span class="en">Is it allowed to stop at the photo gate?</span><span class="ro">Este permisă oprirea la poarta foto?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Yes</span><span class="ro">Da</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">No</span><span class="ro">Nu</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Only in traffic</span><span class="ro">Doar în trafic</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q63">
+<div class="q-head"><div class="q-text"><span class="q-num">63.</span> <span class="en">Where do you go after the photo gate?</span><span class="ro">Unde mergi după poarta foto?</span></div></div>
+<ul class="opts">
+<li data-correct="1"><span class="letter">A</span><span class="opt-text"><span class="en">To the exit inspection</span><span class="ro">La inspecția de ieșire</span></span></li>
+<li><span class="letter">B</span><span class="opt-text"><span class="en">To the parking area</span><span class="ro">La parcare</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">To the block group</span><span class="ro">La block group</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q64">
+<div class="q-head"><div class="q-text"><span class="q-num">64.</span> <span class="en">What must you show at the exit inspection?</span><span class="ro">Ce trebuie să arăți la inspecția de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Driver&#x27;s license</span><span class="ro">Permisul de conducere</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Cargocard</span><span class="ro">Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Container list</span><span class="ro">Lista containerelor</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q65">
+<div class="q-head"><div class="q-text"><span class="q-num">65.</span> <span class="en">When may you proceed to the exit control?</span><span class="ro">Când poți merge la controlul de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">When the container is empty</span><span class="ro">Când containerul este gol</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">When all data and status are correct</span><span class="ro">Când toate datele și statusul sunt corecte</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">When the driver is ready</span><span class="ro">Când șoferul este gata</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q66">
+<div class="q-head"><div class="q-text"><span class="q-num">66.</span> <span class="en">What must you do at the exit control?</span><span class="ro">Ce trebuie să faci la controlul de ieșire?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Show your Cargocard</span><span class="ro">Să arăți Cargocard-ul</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Open the container</span><span class="ro">Să deschizi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q67">
+<div class="q-head"><div class="q-text"><span class="q-num">67.</span> <span class="en">What must you do if the barrier does not open?</span><span class="ro">Ce trebuie să faci dacă bariera nu se deschide?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Drive forward</span><span class="ro">Să mergi înainte</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Check the ECT app</span><span class="ro">Să verifici aplicația ECT</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Leave the truck</span><span class="ro">Să părăsești camionul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q68">
+<div class="q-head"><div class="q-text"><span class="q-num">68.</span> <span class="en">What must you do if the barrier at the exit does not open?</span><span class="ro">Ce trebuie să faci dacă bariera de la ieșire nu se deschide?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Check the container</span><span class="ro">Să verifici containerul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Check the ECT app</span><span class="ro">Să verifici aplicația ECT</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Drive back to the photo gate</span><span class="ro">Să conduci înapoi la poarta foto</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q69">
+<div class="q-head"><div class="q-text"><span class="q-num">69.</span> <span class="en">What must you check in the app?</span><span class="ro">Ce trebuie să verifici în aplicație?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Whether the container is empty</span><span class="ro">Dacă containerul este gol</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Whether all steps are marked green</span><span class="ro">Dacă toți pașii sunt marcați cu verde</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Whether the parking is free</span><span class="ro">Dacă parcarea este liberă</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q70">
+<div class="q-head"><div class="q-text"><span class="q-num">70.</span> <span class="en">What must you do if a step is missing?</span><span class="ro">Ce trebuie să faci dacă lipsește un pas?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Leave the terminal</span><span class="ro">Să părăsești terminalul</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Return and complete the missing step</span><span class="ro">Să te întorci și să finalizezi pasul lipsă</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Change the container</span><span class="ro">Să schimbi containerul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+<article class="q" id="s1q71">
+<div class="q-head"><div class="q-text"><span class="q-num">71.</span> <span class="en">What must you do if another problem occurs?</span><span class="ro">Ce trebuie să faci dacă apare o altă problemă?</span></div></div>
+<ul class="opts">
+<li><span class="letter">A</span><span class="opt-text"><span class="en">Go to the parking area</span><span class="ro">Să mergi la parcare</span></span></li>
+<li data-correct="1"><span class="letter">B</span><span class="opt-text"><span class="en">Contact the security service via intercom</span><span class="ro">Să contactezi serviciul de pază prin interfon</span></span></li>
+<li><span class="letter">C</span><span class="opt-text"><span class="en">Turn off the engine</span><span class="ro">Să oprești motorul</span></span></li>
+</ul>
+<div class="q-actions"><button type="button" class="btn-answer">Răspuns</button><button type="button" class="btn-ro">Traduce</button></div>
+</article>
+</section>
+
+</main>
+
+<script>
+(function () {
+  function toggleReveal(card, btn) {
+    var on = card.classList.toggle('revealed');
+    btn.textContent = on ? 'Ascunde' : 'Răspuns';
+  }
+  function toggleRO(card, btn) {
+    var on = card.classList.toggle('show-ro');
+    btn.textContent = on ? 'Doar EN' : 'Traduce';
+  }
+
+  // Event delegation — one listener handles all buttons inside main.
+  document.querySelector('main').addEventListener('click', function (ev) {
+    var t = ev.target;
+    if (t.tagName !== 'BUTTON') return;
+    var card = t.closest('article.q');
+    if (!card) return;
+    if (t.classList.contains('btn-answer')) toggleReveal(card, t);
+    else if (t.classList.contains('btn-ro')) toggleRO(card, t);
+  });
+
+  document.getElementById('reveal-all').addEventListener('click', function () {
+    var cards = document.querySelectorAll('article.q');
+    for (var i = 0; i < cards.length; i++) {
+      if (!cards[i].classList.contains('revealed')) {
+        toggleReveal(cards[i], cards[i].querySelector('.btn-answer'));
+      }
+    }
+  });
+  document.getElementById('hide-all').addEventListener('click', function () {
+    var cards = document.querySelectorAll('article.q.revealed');
+    for (var i = 0; i < cards.length; i++) {
+      toggleReveal(cards[i], cards[i].querySelector('.btn-answer'));
+    }
+  });
+  document.getElementById('translate-all').addEventListener('click', function () {
+    var cards = document.querySelectorAll('article.q');
+    for (var i = 0; i < cards.length; i++) {
+      if (!cards[i].classList.contains('show-ro')) {
+        toggleRO(cards[i], cards[i].querySelector('.btn-ro'));
+      }
+    }
+  });
+  document.getElementById('untranslate-all').addEventListener('click', function () {
+    var cards = document.querySelectorAll('article.q.show-ro');
+    for (var i = 0; i < cards.length; i++) {
+      toggleRO(cards[i], cards[i].querySelector('.btn-ro'));
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
