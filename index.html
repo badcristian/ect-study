@@ -129,14 +129,20 @@
     padding: 0;
     margin: 4px 0 6px;
   }
-  ul.opts li { padding: 2px 0; }
+  ul.opts li {
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  ul.opts li:last-child { border-bottom: none; }
   article.q.revealed ul.opts li[data-correct="1"] {
     background: #fff4a8;
     border-left: 4px solid #000;
     padding: 4px 8px;
     font-weight: 600;
   }
-  .letter { font-weight: 600; margin-right: 4px; }
+  .letter { font-weight: 600; margin-right: 8px; }
+  .letter::before { content: "("; }
+  .letter::after { content: ")"; }
   .opt-text .ro {
     display: none;
     opacity: .6;
@@ -156,6 +162,155 @@
   @media print {
     header.top, .q-actions { display: none !important; }
   }
+
+  .quiz-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 12px;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  .quiz-backdrop.open { display: flex; }
+  .quiz-modal {
+    background: #fff;
+    border: 1px solid #000;
+    width: 100%;
+    max-width: 560px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .quiz-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 8px;
+  }
+  .quiz-head .progress {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .quiz-head .score {
+    font-size: 14px;
+    opacity: .75;
+    margin-left: auto;
+  }
+  .quiz-head .quiz-restart,
+  .quiz-head .quiz-close {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  .quiz-q {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .quiz-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .quiz-opts button {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    white-space: normal;
+  }
+  .quiz-opts button .letter { flex: 0 0 auto; }
+  .quiz-opts button.selected {
+    background: #000;
+    color: #fff;
+  }
+  .quiz-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .quiz-foot button:disabled {
+    cursor: not-allowed;
+    opacity: .4;
+  }
+  .quiz-foot button:disabled:hover {
+    background: #fff;
+    color: #000;
+  }
+  .quiz-result-summary {
+    text-align: center;
+    padding: 4px 4px 8px;
+    border-bottom: 1px solid #000;
+  }
+  .quiz-result-summary .big {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .quiz-result-summary .sub {
+    opacity: .7;
+    font-size: 14px;
+  }
+  .quiz-review {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .quiz-review .rq {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .quiz-review .rq-head {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .quiz-review .rq-head .mark {
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+    margin-right: 4px;
+    font-weight: 700;
+  }
+  .quiz-review .rq.correct .rq-head .mark { color: #1a7a1a; }
+  .quiz-review .rq.wrong .rq-head .mark { color: #b31111; }
+  .quiz-review ul.r-opts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .quiz-review ul.r-opts li {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .quiz-review ul.r-opts li.is-correct {
+    background: #c8f7c5;
+    border-color: #000;
+  }
+  .quiz-review ul.r-opts li.is-wrong {
+    background: #fbc9c9;
+    border-color: #000;
+  }
+  .quiz-review ul.r-opts li .letter { flex: 0 0 auto; }
+  .quiz-review ul.r-opts li .tag {
+    margin-left: auto;
+    font-size: 12px;
+    opacity: .75;
+    flex: 0 0 auto;
+  }
 </style>
 </head>
 <body>
@@ -166,6 +321,7 @@
     <span class="count">176</span>
   </div>
   <div class="top-actions">
+    <button type="button" id="start-quiz">Quiz</button>
     <button type="button" id="toggle-answers">Arată toate răspunsurile</button>
     <button type="button" id="toggle-translations">Traduce toate</button>
   </div>
@@ -1765,6 +1921,19 @@
 
 </main>
 
+<div class="quiz-backdrop" id="quiz-backdrop" role="dialog" aria-modal="true" aria-labelledby="quiz-progress">
+  <div class="quiz-modal" id="quiz-modal">
+    <div class="quiz-head">
+      <span class="progress" id="quiz-progress"></span>
+      <span class="score" id="quiz-score"></span>
+      <button type="button" class="quiz-restart" id="quiz-restart">Reia</button>
+      <button type="button" class="quiz-close" id="quiz-close" aria-label="Închide">Închide</button>
+    </div>
+    <div class="quiz-body" id="quiz-body"></div>
+    <div class="quiz-foot" id="quiz-foot"></div>
+  </div>
+</div>
+
 <script>
 (function () {
   function toggleReveal(card, btn) {
@@ -1826,6 +1995,200 @@
   actions.addEventListener('scroll', updateEdges, { passive: true });
   window.addEventListener('resize', updateEdges);
   updateEdges();
+
+  var QUIZ_SIZE = 10;
+  var backdrop = document.getElementById('quiz-backdrop');
+  var progressEl = document.getElementById('quiz-progress');
+  var scoreEl = document.getElementById('quiz-score');
+  var bodyEl = document.getElementById('quiz-body');
+  var footEl = document.getElementById('quiz-foot');
+  var restartBtn = document.getElementById('quiz-restart');
+  var closeBtn = document.getElementById('quiz-close');
+  var quiz = null;
+
+  function collectQuestions() {
+    var nodes = document.querySelectorAll('article.q');
+    var list = [];
+    for (var i = 0; i < nodes.length; i++) {
+      var card = nodes[i];
+      var qEn = card.querySelector('.q-text .en');
+      var opts = card.querySelectorAll('ul.opts li');
+      if (!qEn || !opts.length) continue;
+      var options = [];
+      var correct = -1;
+      for (var j = 0; j < opts.length; j++) {
+        var li = opts[j];
+        var letterEl = li.querySelector('.letter');
+        var textEl = li.querySelector('.opt-text .en');
+        if (!textEl) continue;
+        options.push({
+          letter: letterEl ? letterEl.textContent.trim() : String.fromCharCode(65 + j),
+          text: textEl.textContent.trim()
+        });
+        if (li.getAttribute('data-correct') === '1') correct = options.length - 1;
+      }
+      if (correct >= 0 && options.length) list.push({ q: qEn.textContent.trim(), opts: options, correct: correct });
+    }
+    return list;
+  }
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function startQuiz() {
+    var all = collectQuestions();
+    var picked = shuffle(all.slice()).slice(0, Math.min(QUIZ_SIZE, all.length));
+    for (var i = 0; i < picked.length; i++) picked[i].chosen = -1;
+    quiz = { questions: picked, index: 0 };
+    renderQuestion();
+  }
+
+  function renderQuestion() {
+    var q = quiz.questions[quiz.index];
+    progressEl.textContent = (quiz.index + 1) + ' / ' + quiz.questions.length;
+    scoreEl.textContent = '';
+    bodyEl.innerHTML = '';
+    footEl.innerHTML = '';
+
+    var qEl = document.createElement('div');
+    qEl.className = 'quiz-q';
+    qEl.textContent = q.q;
+    bodyEl.appendChild(qEl);
+
+    var opts = document.createElement('div');
+    opts.className = 'quiz-opts';
+    var buttons = [];
+    for (var i = 0; i < q.opts.length; i++) {
+      (function (idx) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        var letterSpan = document.createElement('span');
+        letterSpan.className = 'letter';
+        letterSpan.textContent = q.opts[idx].letter;
+        var textSpan = document.createElement('span');
+        textSpan.textContent = q.opts[idx].text;
+        b.appendChild(letterSpan);
+        b.appendChild(textSpan);
+        if (q.chosen === idx) b.classList.add('selected');
+        b.addEventListener('click', function () {
+          q.chosen = idx;
+          for (var k = 0; k < buttons.length; k++) buttons[k].classList.remove('selected');
+          b.classList.add('selected');
+          nextBtn.disabled = false;
+        });
+        buttons.push(b);
+        opts.appendChild(b);
+      })(i);
+    }
+    bodyEl.appendChild(opts);
+
+    var nextBtn = document.createElement('button');
+    nextBtn.type = 'button';
+    nextBtn.textContent = (quiz.index + 1 === quiz.questions.length) ? 'Vezi rezultatul' : 'Înainte';
+    nextBtn.disabled = q.chosen < 0;
+    nextBtn.addEventListener('click', nextQuestion);
+    footEl.appendChild(nextBtn);
+  }
+
+  function nextQuestion() {
+    quiz.index++;
+    if (quiz.index >= quiz.questions.length) renderResult();
+    else renderQuestion();
+  }
+
+  function renderResult() {
+    var total = quiz.questions.length;
+    var score = 0;
+    for (var i = 0; i < total; i++) if (quiz.questions[i].chosen === quiz.questions[i].correct) score++;
+
+    progressEl.textContent = 'Rezultat';
+    scoreEl.textContent = '';
+    bodyEl.innerHTML = '';
+    footEl.innerHTML = '';
+
+    var summary = document.createElement('div');
+    summary.className = 'quiz-result-summary';
+    var big = document.createElement('div');
+    big.className = 'big';
+    big.textContent = score + ' / ' + total;
+    var sub = document.createElement('div');
+    sub.className = 'sub';
+    sub.textContent = Math.round((score / total) * 100) + '% corecte';
+    summary.appendChild(big);
+    summary.appendChild(sub);
+    bodyEl.appendChild(summary);
+
+    var review = document.createElement('div');
+    review.className = 'quiz-review';
+    for (var i = 0; i < total; i++) {
+      var q = quiz.questions[i];
+      var isCorrect = q.chosen === q.correct;
+      var rq = document.createElement('div');
+      rq.className = 'rq ' + (isCorrect ? 'correct' : 'wrong');
+
+      var head = document.createElement('div');
+      head.className = 'rq-head';
+      var mark = document.createElement('span');
+      mark.className = 'mark';
+      mark.textContent = isCorrect ? '✓' : '✗';
+      head.appendChild(mark);
+      head.appendChild(document.createTextNode((i + 1) + '. ' + q.q));
+      rq.appendChild(head);
+
+      var ul = document.createElement('ul');
+      ul.className = 'r-opts';
+      for (var j = 0; j < q.opts.length; j++) {
+        var li = document.createElement('li');
+        if (j === q.correct) li.className = 'is-correct';
+        else if (j === q.chosen) li.className = 'is-wrong';
+        var letter = document.createElement('span');
+        letter.className = 'letter';
+        letter.textContent = q.opts[j].letter;
+        var text = document.createElement('span');
+        text.textContent = q.opts[j].text;
+        li.appendChild(letter);
+        li.appendChild(text);
+        if (j === q.correct || j === q.chosen) {
+          var tag = document.createElement('span');
+          tag.className = 'tag';
+          if (j === q.correct && j === q.chosen) tag.textContent = 'răspunsul tău ✓';
+          else if (j === q.correct) tag.textContent = 'corect';
+          else tag.textContent = 'răspunsul tău';
+          li.appendChild(tag);
+        }
+        ul.appendChild(li);
+      }
+      rq.appendChild(ul);
+      review.appendChild(rq);
+    }
+    bodyEl.appendChild(review);
+  }
+
+  function openQuiz() {
+    startQuiz();
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeQuiz() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+    quiz = null;
+  }
+
+  document.getElementById('start-quiz').addEventListener('click', openQuiz);
+  restartBtn.addEventListener('click', startQuiz);
+  closeBtn.addEventListener('click', closeQuiz);
+  backdrop.addEventListener('click', function (ev) {
+    if (ev.target === backdrop) closeQuiz();
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && backdrop.classList.contains('open')) closeQuiz();
+  });
 })();
 </script>
 
