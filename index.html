@@ -166,10 +166,8 @@
     <span class="count">176</span>
   </div>
   <div class="top-actions">
-    <button type="button" id="reveal-all">Arată toate</button>
-    <button type="button" id="hide-all">Ascunde toate</button>
-    <button type="button" id="translate-all">Traduce toate</button>
-    <button type="button" id="untranslate-all">Ascunde traduceri</button>
+    <button type="button" id="toggle-answers">Arată toate răspunsurile</button>
+    <button type="button" id="toggle-translations">Traduce toate</button>
   </div>
 </header>
 
@@ -1788,33 +1786,28 @@
     else if (t.classList.contains('btn-ro')) toggleRO(card, t);
   });
 
-  document.getElementById('reveal-all').addEventListener('click', function () {
+  var answersShown = false;
+  document.getElementById('toggle-answers').addEventListener('click', function () {
+    answersShown = !answersShown;
     var cards = document.querySelectorAll('article.q');
     for (var i = 0; i < cards.length; i++) {
-      if (!cards[i].classList.contains('revealed')) {
+      if (cards[i].classList.contains('revealed') !== answersShown) {
         toggleReveal(cards[i], cards[i].querySelector('.btn-answer'));
       }
     }
+    this.textContent = answersShown ? 'Ascunde toate răspunsurile' : 'Arată toate răspunsurile';
   });
-  document.getElementById('hide-all').addEventListener('click', function () {
-    var cards = document.querySelectorAll('article.q.revealed');
-    for (var i = 0; i < cards.length; i++) {
-      toggleReveal(cards[i], cards[i].querySelector('.btn-answer'));
-    }
-  });
-  document.getElementById('translate-all').addEventListener('click', function () {
+
+  var translationsShown = false;
+  document.getElementById('toggle-translations').addEventListener('click', function () {
+    translationsShown = !translationsShown;
     var cards = document.querySelectorAll('article.q');
     for (var i = 0; i < cards.length; i++) {
-      if (!cards[i].classList.contains('show-ro')) {
+      if (cards[i].classList.contains('show-ro') !== translationsShown) {
         toggleRO(cards[i], cards[i].querySelector('.btn-ro'));
       }
     }
-  });
-  document.getElementById('untranslate-all').addEventListener('click', function () {
-    var cards = document.querySelectorAll('article.q.show-ro');
-    for (var i = 0; i < cards.length; i++) {
-      toggleRO(cards[i], cards[i].querySelector('.btn-ro'));
-    }
+    this.textContent = translationsShown ? 'Ascunde toate traducerile' : 'Traduce toate';
   });
 
   var topBar = document.querySelector('header.top');
