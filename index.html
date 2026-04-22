@@ -20,21 +20,62 @@
     top: 0;
     background: #fff;
     border-bottom: 1px solid #000;
-    padding: 6px 10px;
+    padding: 6px 8px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 6px;
-    align-items: center;
     z-index: 10;
+  }
+  header.top .top-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    overflow: hidden;
+    max-height: 40px;
+    transition: max-height .18s ease, margin .18s ease, opacity .12s ease;
+  }
+  header.top.scrolled .top-title {
+    max-height: 0;
+    margin: -6px 0 -6px;
+    opacity: 0;
   }
   header.top h1 {
     font-size: 14px;
     font-weight: 600;
-    margin: 0 10px 0 0;
+    margin: 0;
   }
   header.top .count {
     font-size: 12px;
-    margin-right: auto;
+    opacity: .7;
+  }
+  header.top .top-actions {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 4px 4px;
+    scroll-padding-inline: 12px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%);
+  }
+  header.top .top-actions.at-start {
+    -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
+  }
+  header.top .top-actions.at-end {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 100%);
+  }
+  header.top .top-actions.at-start.at-end {
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  header.top .top-actions::-webkit-scrollbar { display: none; }
+  header.top .top-actions button {
+    flex: 0 0 auto;
+    padding: 10px 18px;
   }
   main {
     max-width: 760px;
@@ -118,12 +159,16 @@
 <body>
 
 <header class="top">
-  <h1>ECT Delta &amp; Euromax</h1>
-  <span class="count">176</span>
-  <button type="button" id="reveal-all">Arată toate</button>
-  <button type="button" id="hide-all">Ascunde toate</button>
-  <button type="button" id="translate-all">Traduce toate</button>
-  <button type="button" id="untranslate-all">Ascunde traduceri</button>
+  <div class="top-title">
+    <h1>ECT Delta &amp; Euromax</h1>
+    <span class="count">176</span>
+  </div>
+  <div class="top-actions">
+    <button type="button" id="reveal-all">Arată toate</button>
+    <button type="button" id="hide-all">Ascunde toate</button>
+    <button type="button" id="translate-all">Traduce toate</button>
+    <button type="button" id="untranslate-all">Ascunde traduceri</button>
+  </div>
 </header>
 
 <main>
@@ -1769,6 +1814,23 @@
       toggleRO(cards[i], cards[i].querySelector('.btn-ro'));
     }
   });
+
+  var topBar = document.querySelector('header.top');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 20) topBar.classList.add('scrolled');
+    else topBar.classList.remove('scrolled');
+  }, { passive: true });
+
+  var actions = document.querySelector('header.top .top-actions');
+  function updateEdges() {
+    var atStart = actions.scrollLeft <= 1;
+    var atEnd = actions.scrollLeft + actions.clientWidth >= actions.scrollWidth - 1;
+    actions.classList.toggle('at-start', atStart);
+    actions.classList.toggle('at-end', atEnd);
+  }
+  actions.addEventListener('scroll', updateEdges, { passive: true });
+  window.addEventListener('resize', updateEdges);
+  updateEdges();
 })();
 </script>
 
